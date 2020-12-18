@@ -1,10 +1,7 @@
-## [Deploy to gh-pages](https://robertleroy.github.io/test_gh)
+# [Deploy to gh-pages](https://robertleroy.github.io/test_gh)
   
-## 1. Create Project / Create Repository
-
-<br>  
-
-## 2. Push to github
+* ## Create Project / Create Repository 
+Push to Github
 ``` js
 git add .
 git commit -m 'first commit'
@@ -14,8 +11,10 @@ git push -u origin master
 
 <br>  
 
-## 3. Set Base
+* ## Set Base
 ``` json
+/* vite.config.js */
+
 module.exports = {
   // base: '/test_gh/'
   base: './'
@@ -24,9 +23,10 @@ module.exports = {
 
 <br>  
 
-## 4. Node script to build and deploy to gh-pages
+* ## Node script to build and deploy to gh-pages
 ``` js
 /* scripts/gh-deploy.js */
+
 /* eslint-disable no-console */
 const execa = require("execa");
 const fs = require("fs");
@@ -58,32 +58,29 @@ const fs = require("fs");
 
 <br>  
 
-## 5. Add `.nojekyll` file to public folder  
-    `corrects for error retrieving files from `_assets` folder.`
+* ## Add `.nojekyll` file to public folder  
+    * *corrects for error retrieving files from `_assets` folder*
 
 <br>  
 
-## 6. Edit package.json, install `execa`
+* ## Install `execa`, edit package.json
+  * *runs script to automate deployment*
+
+``` js
+npm install execa -D
+```
+
 ``` json
 /* packsge.json */
 
 "scripts": {
   "deploy": "node scripts/gh-deploy.js"
 }
-
-/* ... */
-
-"devDependencies": {
-  "execa": "latest"
-}
-```
-``` js
-npm install
 ```
 
 <br>  
 
-## 7. add, commit, push, then run deploy
+* ## add, commit, push, **deploy**
 ``` js 
 git add . && git commit -m 'create deploy script'
 git push
