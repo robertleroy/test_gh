@@ -1,3 +1,4 @@
 module.exports = {
-  base: '/test_gh/'
+  // base: '/test_gh/'
+  base: './'
 }
