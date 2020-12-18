@@ -1,0 +1,59 @@
+// _helpers.scss  v-0.3 //
+
+
+// #region Helper classes ================== //
+.btn, [btn] {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {    
+    opacity: 0.6;
+  }  
+}
+
+.subtitle {
+  color: $muted-8;
+  font-weight: normal;
+}
+
+.router-link-active, .active,
+.router-link-active:hover, .active:hover {
+  color: var(--vue-green);
+
+  @extend .btn;
+}
+
+
+[class*="-active"] {
+	transition: 0.2s
+}
+// #endregion Helper classes ================== //
+
+
+// #region vue-specific
+[v-cloak] {
+  position: relative;
+
+  > * { display:none }
+  &::before { 
+    content: "loading…";
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+  }
+}
+
+svg-icon {
+  font-size: var(--h3);
+  color: $fontColor;
+  border: none;
+  outline: none;
+  user-select: none;
+  
+  cursor: pointer;
+
+  @extend .btn;
+}
+// #endregion vue-specific

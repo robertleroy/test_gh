@@ -1,0 +1,40 @@
+//  _range.scss v-0.3 //
+  // #region Range ======================== //
+  $rangeBackground: black;
+  $rangeThumb: orange;
+
+  [type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1rem;
+    background: $rangeBackground;
+    overflow: visible;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    border: none;
+    
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 1.5rem;
+      width: 1.5rem;
+      border: none;
+      border-radius: 0.75rem;
+      background: rangeThumb;
+      cursor: pointer;      
+    }
+    
+    &::-moz-range-thumb {
+      appearance: none;
+      height: 1.5rem;
+      width: 1.5rem;
+      border: none;
+      border-radius: 0.75rem;
+      background: rangeThumb;
+      cursor: pointer;      
+    }
+  }
+  // #endregion Range ======================== //
+
+
+

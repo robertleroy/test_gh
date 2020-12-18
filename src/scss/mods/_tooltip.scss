@@ -1,0 +1,109 @@
+// _tooltip.scss v-0.3 //
+
+/*
+  <p>Add a tooltip
+    <span tooltip>
+      here
+      <span tip="right">hello world</span>
+    </span>
+  </p>
+*/
+
+// #region tootip ======== //
+:root { 
+  --tipForeground: #fff;
+  --tipBackground: #333; 
+  --transition: 0.2s;
+  --delay: 0.8s;
+  --cursor: help;
+  --arrowX: 33%;
+  --borderColor: var(--tipBackground);
+}
+
+[tooltip], .tooltip {
+  position: relative;
+  display: inline-grid;
+  border-bottom: 1px dotted var(--borderColor);
+  cursor: var(--cursor);  
+}
+
+[tip] {
+  position: absolute;
+  top: -2rem;
+  /* FOR TOP AND BOTTOM: 
+      'left: auto;' to center 
+      'left: 0;' to justify left */
+  left: 0; 
+  justify-self: center;
+  
+  width: max-content;
+  padding: 0 1rem;
+  
+  color: var(--tipForeground);
+  background: var(--tipBackground);
+  border-radius: 0.5rem;
+  
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity var(--transition);
+  transition-delay: var(--delay);
+  
+  &::after {
+    content: "";     
+    position: absolute;
+    top: 100%;
+    left: var(--arrowX);
+    
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: var(--tipBackground) transparent transparent transparent;
+    z-index: 20;
+  }
+}
+
+[tooltip]:hover [tip],
+.tooltip:hover [tip] {  
+  visibility: visible;
+  opacity: 1;
+}
+
+[tip="bottom"] {
+  top: 2.5rem;
+  
+  &::after {
+    top: -1rem;
+    left: var(--arrowX);
+    
+    border-color: transparent transparent var(--tipBackground) transparent;
+    z-index: 10;
+  }
+}
+
+[tip="right"] {
+  top: 0rem;
+  left: calc(100% + 1rem);
+  display: inline-grid;
+  
+  &::after {
+    top: calc(50% - 0.5rem);
+    left: -1rem;
+    border-color: transparent var(--tipBackground) transparent transparent;
+    z-index: 10;
+  }
+}
+
+[tip="left"] {
+  top: 0rem;
+  right: calc(100% + 1rem);
+  left: auto;
+  
+  &::after {
+    top: calc(50% - 0.5rem);
+    left: 100%;
+    border-color: transparent transparent transparent var(--tipBackground);
+    z-index: 10;
+  }
+}
+// #endregion tootip ======== //
+

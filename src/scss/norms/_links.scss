@@ -1,0 +1,23 @@
+// _links.scss v-0.3 //
+
+// #region Links ================== //
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color .1s, background-color .1s;
+  outline-width:0;
+  
+  // &:link {
+  //   color: var(--linkColor);
+  // }
+  // &:visited {
+  //   color: var(--linkColor);
+  // }
+  &:hover {
+    color: var(--linkHover);
+    text-decoration: underline solid;
+  }
+  &:active { text-decoration: underline dotted; }
+}
+p a, li a { text-decoration: none; }
+// #endregion Links ================== //

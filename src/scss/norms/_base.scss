@@ -1,0 +1,90 @@
+// _base.scss v-0.3 //
+
+// #region Document ================== //
+html {  
+  font-family: $sans-serif;  
+  font-size: var(--root);  
+} 
+ 
+body {
+  font-family: inherit;
+  font-size: var(--h6);
+  line-height: 2rem;
+  background-color: $backgroundColor;
+  color: rgba(0,0,0,0.87);
+  min-height: 100vh;
+}
+// #endregion Document ================== //
+
+// #region Headings ================== //
+h1, h2, h3, h4, h5, h6 {
+  color: $headingColor;
+  font-family: $headingFont;
+  font-style: normal;
+  font-weight: bolder;
+}
+h1, .h1 {
+  font-size: var(--h1);
+  line-height: 3rem;
+}
+h2, .h2 {
+  font-size: var(--h2);
+  line-height: 2.5rem;
+}
+h3, .h3 {
+  font-size: var(--h3);
+  line-height: 2.5rem;
+}
+h4, .h4 {
+  font-size: var(--h4);
+  line-height: 2rem;
+}
+h5, .h5 {
+  font-size: var(--h5);
+  line-height: 2rem;
+}
+h6, .h6 {
+  font-size: var(--h6);
+  line-height: 2rem;
+}
+.h7 {
+  font-size: var(--h7);
+  line-height: 1.5rem;
+}
+.h8 {
+  font-size: var(--h8);
+  line-height: 1.5rem;
+}
+.h9 {
+  font-size: var(--h9);
+  line-height: 1.5rem;
+}
+// #endregion Headings ================== //
+
+// #region Elements ================== //
+hr {
+	height: 0;
+	margin: 15px 0;
+	overflow: hidden;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #E0E0E0
+}
+p { margin: 0 0 1rem; }
+blockquote {
+  @extend .h7;
+  padding: 0.5rem 1.5rem;
+  border: 0 solid rgba(0,0,0,0.1);
+  border-left-width: 1rem ;
+  max-width: 35em;
+  margin: 1rem 0;  
+}
+small, caption {
+  vertical-align: baseline;
+  line-height: 1;
+}
+caption { color: $muted-5; }
+
+sub, sup { font-size: var(--h8); }
+
+// #endregion Elements ================== //

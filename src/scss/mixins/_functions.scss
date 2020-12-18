@@ -1,0 +1,12 @@
+// _functions.scss v-0.3 //
+
+// return white or black to
+// best contrast input color
+@function contrast($color) {
+	@if (lightness($color) > 40) {
+		@return #000;
+	}
+	@else {
+		@return #FFF;
+	}
+}

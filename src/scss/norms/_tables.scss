@@ -1,0 +1,19 @@
+// tables.scss v-0.2 //
+
+// #region Tables ================== //
+table {
+  @extend .h7;	
+  font-family: $headingFont;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    th {
+      @extend .h6;	
+      padding-bottom: 1px;
+    }
+  }
+}
+// #endregion Tables ================== //

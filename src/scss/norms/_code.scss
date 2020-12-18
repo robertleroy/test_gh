@@ -1,0 +1,41 @@
+//  _code.scss  v-0.3 //
+
+// #region code  ================== //
+pre, code {
+  font-family: $monospace;
+}
+
+code {  
+  font-size: var(--h7);
+  line-height: 1;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  white-space: pre-wrap;
+  word-break: normal;
+  word-wrap: break-word;
+  overflow-wrap: normal;
+}
+
+pre {
+  font-size: var(--h7);
+  line-height: 1;
+  padding: 0 2rem 1.5rem;
+  background: transparent;
+  margin-bottom: 0.5rem;  
+  
+  white-space: pre-wrap;
+  word-break: normal;
+  word-wrap: break-word;
+  overflow-wrap: normal;
+  overflow-y: auto;
+}
+
+.codeblock {
+  border-radius: 0.4rem;
+  @include shadow(2);
+  background: #fff;  
+}
+// #endregion code  ================== //
+

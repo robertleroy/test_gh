@@ -1,0 +1,94 @@
+// _lists.scss  v-0.3 //
+// #region Lists ====================== // 
+
+// ul, ol {
+//   padding-left: 1rem;
+//   margin-bottom: 1rem;
+//   list-style: none;
+// }
+
+// Indent Variable
+$indent: 2ch;
+
+ol,
+ul {
+	padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: $indent;
+}
+
+ul ul {  
+  padding-left: $indent;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-alpha;
+  padding-left: $indent;
+}
+
+ol ol ol,
+ol ul ol,
+ul ol ol,
+ul ul ol {
+	list-style-type: lower-roman
+}
+
+// li ul, li ol {
+//   padding-top: 1rem;
+// }
+
+ul.none, ol.none,
+ul[none], ol[none] {
+  list-style: none;
+
+  * {
+    list-style: none;
+  }
+}
+
+.flat {
+  list-style: none;
+  padding-left: 0;
+  ul, ol {
+    list-style: none;
+    padding-left: 0;
+
+  }
+}
+
+
+
+
+
+
+// Definition lists.
+dl {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  
+  dt {
+    font-family: $headingFont;
+    font-size: var(--h7);
+    font-weight: bolder;
+    line-height: 1.1;
+    margin-top: 0.5rem;
+
+    &::after {
+      content: ':'
+    }
+  }
+
+  dd {
+    font-size: var(--h7);
+    line-height: 1.2;
+    // padding-left: 1rem;
+  }
+
+  // dd + dt {
+  //   padding-top: 1rem;
+  // }
+}
+
+// #endregion Lists ====================== // 

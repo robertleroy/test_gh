@@ -1,0 +1,21 @@
+// _animations.scss  v-0.3 //
+
+// #region vue-animation ================== //
+.slideRight-enter, /* vue-2 */
+.slideRight-enter-from, /* vue-3 */
+.slideRight-leave-to {
+	transform: translateX(-100vw)
+}
+
+.slideLeft-enter, /* vue-2 */
+.slideLeft-enter-from, /* vue-3 */
+.slideLeft-leave-to {
+	transform: translateX(100vw)
+}
+
+.fade-enter, /* vue-2 */
+.fade-enter-from, /* vue-3 */
+.fade-leave-to {
+	opacity: 0
+}
+// #endregion vue-animation ================== //

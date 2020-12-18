@@ -1,0 +1,42 @@
+// _progress.scss v-0.3 //
+  // #region Progress ======================== //
+
+	$progressBackground: black;
+	$progressValue: orange;
+	
+	progress {
+		width: 100%;
+		display: inline-block;
+		cursor: pointer;
+		height: 1rem;
+		background: $progressBackground;
+		border: none;
+		// vertical-align: middle;
+		border-radius: 0.5rem;
+		overflow: hidden;
+	}
+	
+	progress::-webkit-progress-bar {
+		border-radius: 0.5rem;
+		background: $progressBackground;
+		border: none;
+	}
+	
+	progress::-moz-progress-bar {
+		border-radius: 0.5rem;
+		background: $progressBackground;
+		border: none;
+	}
+	
+	progress::-webkit-progress-value {
+		/*Chrome-Safari value*/
+		background: $progressValue;
+		border: none;
+	}
+	 
+	progress::-ms-fill {
+		/*IE-MS value*/
+		background: $progressValue;
+		border: none;
+	}   
+		// #endregion Progress ======================== //

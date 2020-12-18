@@ -1,0 +1,121 @@
+// _normalize.scss v-0.3 //
+// combination of normalize and sanitize.
+
+*, ::before, ::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+::before, ::after {
+  text-decoration: inherit; 
+  vertical-align: inherit; 
+}
+html {
+  cursor: default; 
+  line-height: 1.5; 
+  -moz-tab-size: 2; 
+  tab-size: 2; 
+  -webkit-tap-highlight-color: transparent ;
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%; 
+  text-size-adjust: 100%;
+  word-break: break-word; 
+  overflow-wrap: break-word
+}
+
+/* #region Grouping content ========== */
+hr { height: 0; overflow: visible;  }
+main { display: block; }
+ol ol, ol ul, ul ol, ul ul,
+dl dl, dl ol, dl ul, ol dl,
+ul dl { margin: 0; }
+nav ol, nav ul {
+  list-style: none;
+  padding: 0; 
+}
+
+/* #region Text-level semantics ========== */
+a { background-color: transparent; }
+abbr[title] { 
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; 
+}
+b, strong { font-weight: bolder; }
+pre, code, kbd, samp { 
+  font-family: monospace, monospace;
+  font-size: 1em; 
+}
+small { font-size: 80%; }
+sub, sup { 
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; 
+}
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+/* #endregion Text-level semantics ========== */
+
+/* #region Embedded content ========== */
+audio, canvas, iframe,
+img, svg, video { vertical-align: middle; }
+audio, video { display: inline-block; }
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+iframe, img { border-style: none; }
+svg:not([fill]) { fill: currentColor; }
+svg:not(:root) { overflow: hidden; }
+/* #endregion Embedded content ========== */
+
+/* User interaction ========== */
+a, area, button, input, label,
+select, summary, textarea,
+[tabindex] {
+  -ms-touch-action: manipulation; 
+  touch-action: manipulation; 
+}
+[hidden] { display: none; }
+
+/* #region Tabular data ========== */
+table { border-collapse: collapse; }
+
+/* Scripting ========== */
+canvas { display: inline-block; }
+template { display: none; }
+
+/* #region Accessibility ========== */
+[aria-busy="true"] { cursor: progress; }
+[aria-controls] { cursor: pointer; }
+[aria-disabled="true"],
+[disabled] { cursor: not-allowed; }
+[aria-hidden="false"][hidden] { display: initial; }
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+/* #endregion Accessibility ========== */
+
+/* #region Interactive ========== */
+//  details { display: block; }
+// summary { display: list-item; }
+// dialog {
+//   background-color: white;
+//   border: solid;
+//   color: black;
+//   display: block;
+//   height: -moz-fit-content;
+//   height: -webkit-fit-content;
+//   height: fit-content;
+//   left: 0;
+//   margin: auto;
+//   padding: 1em;
+//   position: absolute;
+//   right: 0;
+//   width: -moz-fit-content;
+//   width: -webkit-fit-content;
+//   width: fit-content;
+// }
+// dialog:not([open]) { display: none; }
+/* #endregion Interactive ========== */

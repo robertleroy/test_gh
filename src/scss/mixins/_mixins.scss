@@ -1,0 +1,70 @@
+// _mixins.scss v-0.3 //
+
+@import './shadows';
+@import './shapes';
+@import './transforms';
+@import './functions';
+
+@mixin border($color:cyan, $style:dotted, $width: 1px) {
+  border: $width $style $color;
+}
+
+@mixin media($break) {
+  @media (min-width: $break) { @content; }
+}
+
+@mixin media-max($break) {
+  @media (max-width: $break) { @content; }
+}
+
+
+// @include absolute(100px, 100px, auto, auto);
+@mixin absolute($top, $right, $bottom, $left) {
+   position: absolute; 
+   top: $top;
+   right: $right;
+   bottom: $bottom;
+   left: $left;
+}
+
+
+// @include ratio(16,9);
+@mixin ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+
+// When using ::before and ::after
+@mixin pseudo($display: inline-block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+
+// @include prefix(transform, scale3d(2.5, 2, 1.5));
+@mixin prefix($prop, $value) {
+   -webkit-#{$prop}: #{$value};
+   -moz-#{$prop}: #{$value};
+   -ms-#{$prop}: #{$value};
+   -o-#{$prop}: #{$value};
+   #{$prop}: #{$value};
+}
+
+
+// $truncation-boundary = max-wdth
+@mixin truncate($max-wdth) {
+    max-width: $max-wdth;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
